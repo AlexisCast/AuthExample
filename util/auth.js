@@ -1,6 +1,7 @@
-import axios from "axios";
+import { REACT_APP_API_KEY } from "@env";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+import axios from "axios";
+const API_KEY = REACT_APP_API_KEY;
 
 export async function createUser(email, password) {
 	const response = await axios.post(
